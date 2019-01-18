@@ -111,6 +111,8 @@ const app = async () => {
     //     callValue: 0,
     //     shouldPollResponse:true
     // });
+    
+    console.log("CONTRACT_GENE_SCIENCE");
 
     console.log(await SettingRegistry.addressOf(await ApostleIds.CONTRACT_GENE_SCIENCE().call()).call());
 
@@ -175,6 +177,16 @@ const app = async () => {
     //     callValue: 0,
     //     shouldPollResponse:true
     // });
+
+    // await SettingRegistry.setUintProperty(await SettingIds.UINT_TOKEN_OFFER_CUT().call(), 400).send({
+    //     feeLimit:100000000,
+    //     callValue:0,
+    //     shouldPollResponse:true
+    // });
+
+    console.log("UINT_TOKEN_OFFER_CUT");
+
+    console.log(await SettingRegistry.uintOf(await SettingIds.UINT_TOKEN_OFFER_CUT().call()).call());
 
     console.log(await SettingRegistry.uintOf(await ApostleIds.UINT_APOSTLE_BID_WAITING_TIME().call()).call());
 
